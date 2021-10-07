@@ -1,0 +1,207 @@
+/* global varaibles */
+:root {
+  /* --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%) */
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --body-size: 14px;
+}
+/* global styles */
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* style  */
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  background-position: bottom -44vh left -6vw;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-color: var(--Very-Dark-Blue);
+}
+main .box1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--Dark-Blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-top-right-radius: 85px;
+  margin-right: 40px;
+  padding: 30px 115px 30px 30px;
+}
+main .box1 a {
+  display: block;
+  margin-left: -53px;
+  margin-top: 10px;
+}
+
+main .box1 ul {
+  display: flex;
+  margin: 25px 0;
+  padding: 0;
+}
+main .box1 ul li {
+  background-color: var(--Very-Dark-Blue);
+  margin-right: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .box2 {
+  background-color: var(--Dark-Blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px 30px;
+}
+main .box2 p {
+  color: var(--Grayish-Blue);
+  font-weight: normal;
+  letter-spacing: 1.7px;
+  width: fit-content;
+  font-size: 13px;
+}
+main .box2 span:first-of-type {
+  color: white;
+  font-weight: bold;
+}
+main .box2 div {
+  width: 400px;
+  margin: 10px auto;
+  height: 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  background-color: var(--Very-Dark-Blue);
+  position: relative;
+}
+main .box2 div span:last-of-type {
+  position: absolute;
+  right: 0;
+  padding: 10px 25px;
+  top: -80px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-bottom-right-radius: 0;
+}
+main .box2 div span:last-of-type p {
+  display: inline-block;
+  font-size: 8px;
+  font-weight: bold;
+}
+main .box2 div span:last-of-type::before {
+  content: "";
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  position: absolute;
+  right: 0px;
+  bottom: -15px;
+}
+main .box2 div span:first-of-type {
+  display: block;
+  width: 81.5%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%) 30%,
+    hsl(335, 100%, 65%) 100%
+  );
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  position: relative;
+}
+main .box2 div span:first-of-type:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  background-color: white;
+}
+.box2 ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.box2 ul li {
+  color: white;
+}
+@media (max-width: 930px) {
+  main {
+    flex-direction: column;
+    background-image: url(../images/bg-mobile.png);
+    background-position: top left;
+    background-size: cover;
+  }
+  main .box1 {
+    margin-right: 0;
+  }
+  main .box2 {
+    margin-top: 20px;
+  }
+  main .box2 div {
+    max-width: 280px;
+  }
+  main .box2 div span:last-of-type {
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    right: auto;
+    top: auto;
+    border-bottom-right-radius: 10px;
+  }
+  main .box2 div span:last-of-type::before {
+    display: none;
+  }
+}
